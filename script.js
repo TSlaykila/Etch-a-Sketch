@@ -1,5 +1,5 @@
 const container = document.querySelector(".container"); 
-const containerWidth = 600;
+const containerWidth = 500;
 document.body.style.cssText = "display: flex;flex-direction: column ; justify-content: center; align-items: center; height: 100vh; margin: 0;";
 container.style.cssText = `display: flex;flex-wrap: wrap; justify-content: center; align-items: center; margin: 0; width: ${containerWidth}px`;
 
