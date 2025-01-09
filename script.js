@@ -7,7 +7,8 @@ container.style.cssText = `display: flex;flex-wrap: wrap; justify-content: cente
 const squareNumber = document.createElement("button");
 squareNumber.innerHTML = "Square Number";
 squareNumber.addEventListener("click", () => {
-    number = parseInt(prompt("How many squares do you wish per side"));
+    number = parseInt(prompt("How many squares do you wish per side (100 max)"));
+    if (number > 100){number = 100; alert("The maximun capability is 100");};
     container.innerHTML = ""
     makeSquare();
 });
@@ -28,7 +29,7 @@ function makeSquare(){
     const grid = document.querySelectorAll(".grid");
     grid.forEach((square) => {
         square.addEventListener("mouseover", (e) => {
-            e.target.style.backgroundColor = "black";
+            e.target.style.backgroundColor = `rgb(${Math.random() * 255}, ${Math.random() * 255}, ${Math.random() * 255})`;
     });
     });
 };
