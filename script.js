@@ -6,9 +6,17 @@ container.style.cssText = `display: flex;flex-wrap: wrap; justify-content: cente
 for(let i = 0; i < 16*16; i++){
     container.style.flexDirection ="row";
     const gridHorizontal = document.createElement("div");
+    gridHorizontal.setAttribute("class", "grid")
     gridHorizontal.style.border = "0.5px solid black";
     gridHorizontal.style.boxSizing = "border-box";
     gridHorizontal.style.height = "25px";
     gridHorizontal.style.width = "25px";
     container.appendChild(gridHorizontal);
 };
+
+const grid = document.querySelectorAll(".grid");
+grid.forEach((square) => {
+    square.addEventListener("mouseover", (e) => {
+        e.target.style.backgroundColor = "black";
+});
+});
